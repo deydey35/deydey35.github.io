@@ -1,0 +1,164 @@
+constante entier TAILLE := 9;
+
+
+/************************************************************
+*           TABLEAU DE CANDIDATS A LONGUEUR VARIABLE        *
+*************************************************************/
+
+// ajouterCandidat
+procédure ajouterCandidat(entF/sortF laCase : tCase1, entF val : entier) c'est
+
+début
+
+    si (laCase.nbCandidats < TAILLE) ET NON(estCandidats(entE laCase, entE val)) alors
+
+        laCase.candidats[laCase.nbCandidats+1] := val;
+        laCase.nbCandidats++;
+
+    finsi
+
+fin
+
+// retirerCandidat
+procédure retirerCandidat(entF/sortF laCase : tCase1, entF val : entier) c'est
+début
+    entier i := 0;
+    booléen trouve := faux;
+    tant que (i <= laCase.nbCandidats) ET (trouve == faux) faire 
+
+        si (laCase.candidats[i] == val) alors
+
+            laCase.candidats[i] == laCase.candidats[nbCandidats]; // Remplace tab[i] par la dernière valeur du tableau
+            laCase.nbCandidats--;
+            trouve := vrai;
+
+    finfaire
+fin
+
+
+// estCandidat
+fonction estCandidat(entF laCase : tCase1, entF val : entier) délivre booléen c'est 
+début
+    
+    pour i de 1 à laCase.nbCandidats faire 
+
+        si laCase.candidats[i] == val alors
+            retourne vrai;
+        finsi
+
+    finfaire
+
+    retourne faux;
+
+fin
+
+
+// nbCandidats
+fonction nbCandidats(entF laCase : tCase1) délivre entier c'est
+début
+
+    retourne laCase.nbCandidats;
+
+fin
+
+/************************************************************
+*                      TABLEAU BOOLEEN                      *
+*************************************************************/
+
+// ajouterCandidat
+procédure ajouterCandidat(entF/sortF laCase : tCase2, entF val : entier) c'est
+début
+    
+    laCase.candidats[val] := vrai;
+
+fin
+
+// retirerCandidat
+procédure retirerCandidat(entF/sortF laCase : tCase2, entF val : entier) c'est
+début
+    
+    laCase.candidats[val] := faux;
+
+fin
+
+// estCandidat
+fonction estCandidat(entF laCase : tCase2, entF val : entier) délivre booléen c'est 
+début
+    
+    retourne tCase2.candidats[val];
+
+fin
+
+// nbCandidats
+fonction nbCandidats2(entF laCase : tCase2) délivre entier c'est
+début
+
+    retourne laCase.nbCandidats;
+
+fin
+
+
+/************************************************************
+*                     PROGRAMME PRINCIPAL                   *
+*************************************************************/
+
+
+programme deduction
+
+g : tGrille;
+s : stats
+progression : booléen;
+nbCasesVides : entier;
+nbCasesVides = chargerGrille(g);
+initialiserCandidats(g);
+progression = vrai;
+tant que (nbCaseVides != 0 ET progression) faire
+    progression = faux;
+
+    // technique du singleton nu
+    pour chaque case libre de la grille faire
+        si la case n'a qu'un seul candidat alors
+
+            // Affecte la valeur
+            laCase.valeur := laCase.candidats[1];
+            s.nbCasesRemplies++;
+            s.nbCandidatsEliminés++;
+            laCase.nbCandidats--; 
+
+
+            pour i de 1 à TAILLE faire // TAILLE = 9
+
+                // Enlève dans la colonne
+                si estCandidat(g[lig][i], laCase.valeur) alors
+                    retirerCandidat(g[lig][i], laCase.valeur); 
+                    s.nbCandidatsEliminés++;
+
+                // Enlève dans la ligne
+                si estCandidat(g[i][col], laCase.valeur) alors
+                    retirerCandidat(g[i][col], laCase.valeur); 
+                    s.nbCandidatsEliminés++;
+                
+                // Enlève dans le bloc
+                si laCase.valeur est présente dans le bloc alors 
+                    retirerCandidat(positionCase, laCase.valeur);
+                    s.nbCandidatsEliminés++;
+
+                progression = vrai;
+        finsi
+    finfaire
+
+    // technique du singleton caché
+    ...
+
+    // autres techniques…
+    ...
+    finfaire
+fin
+
+procédure afficherStats(entF nbCandidatsInitial : entier, entF nbCasesRemplies : entier, entF nbCasesVidesInitial : entier, entF nbCandidatsElimines : entier, entF nbCandidatsInitial : entier) c'est
+début 
+    afficherEcran("\n\nNombre case(s) remplie(s) = %d sur %d", nbCasesRemplies, nbCasesVidesInitial);
+    afficherEcran("\nTaux de remplissage = %3.f\%", (nbCasesRemplies / nbCasesVidesInitial) * 100);
+    afficherEcran("\nNombre total de candidats éliminés = %d", nbCandidatsEliminés);
+    afficherEcran("\nPourcentage d'élimination = %3.f", (nbCandidatsEliminés/nbCandidatsInitial)*100);
+fin
