@@ -27,8 +27,8 @@
           <nav class="nav-menu d-none d-lg-block">
             <ul>
               <li class="active"><a href="index.html#header">Home</a></li>
-              <li><a href="index.html#about">About me</a></li>
-              <li><a href="index.html#services">Hobbies</a></li>
+              <li><a href="index.html#about">À Propos</a></li>
+              <li><a href="index.html#services">Intérêts</a></li>
               <li><a href="index.html#portfolio">Projets</a></li>
               
               <li><a href="index.html#contact">Contact</a></li>
@@ -94,17 +94,24 @@
           <h1 class="project-title">SAE 301 \</h1>
           <h1 class="project-title2">Collecte de données Web</h1>
           <p class="project-skill">Développer un outil décisionnel - Compétence 4</p>
-          <p class="project-description"></p>
+          <p class="project-description">Web Scraping Python : Extraction automatisée de données géographiques ciblées.
+
+API : Requêtage et filtrage de données météorologiques historiques.
+
+Traitement de données : Structuration et manipulation via DataFrames (Pandas).
+
+Dashboard Interactif : Dataviz analytique combinant cartographie (Folium) et graphiques (Matplotlib/Seaborn).</p>
         </div>
     
         <div class="project-steps">
           <h2>Étapes \ </h2>
-          <ul>
-            <li>Prise de connaissance des 2 différentes structues de données</li>
-            <li>Implémentation de 4 techniques de résolutions : paires-cachés, paires-nues, singleton caché et singleton-nue</li>
-            <li>Préparation de tests unitaires et implémentation backtracking</li>
-            <li>Validation des entrées utilisateurs et gestion des erreurs</li>
-          </ul>
+            <ul>
+              <li>Recherche, analyse et sélection des sources de données (Site web à scraper et API météorologique SYNOP)</li>
+              <li>Extraction et structuration des données via Web Scraping et requêtage API filtré</li>
+              <li>Traitement et manipulation des données géographiques et climatiques sous forme de DataFrames</li>
+              <li>Conception d'un tableau de bord interactif avec indicateurs visuels (Cartes Folium et graphiques comparatifs)</li>
+              <li>Optimisation du code, gestion des erreurs et automatisation de l'outil décisionnel</li>
+            </ul>
         </div>
     
         <div class="project-images">
