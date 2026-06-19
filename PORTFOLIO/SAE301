@@ -3,124 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAE301 - Collecte Automatisée données web</title>
+  <title>SAE 301 - Collecte de données Web</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/projet.css" rel="stylesheet">
-   <!-- Google Fonts -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container-fluid d-flex">
-
       <div class="logo mr-auto">
-        <!--<h1 class="text-light"><a href="index.html"><span>Ninestars</span></a></h1>-->
-       
         <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
-        </div>
-
-          <nav class="nav-menu d-none d-lg-block">
-            <ul>
-              <li class="active"><a href="index.html#header">Home</a></li>
-              <li><a href="index.html#about">À Propos</a></li>
-              <li><a href="index.html#services">Intérêts</a></li>
-              <li><a href="index.html#portfolio">Projets</a></li>
-              
-              <li><a href="index.html#contact">Contact</a></li>
-
-              <li class="get-started"><a href="assets/CV_DEONNA.pdf">Mon CV</a></li>
-            </ul>
-          </nav><!-- .nav-menu -->
-        </div>
+      </div>
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li><a href="index.html#header">Home</a></li>
+          <li><a href="index.html#about">À Propos</a></li>
+          <li><a href="index.html#services">Intérêts</a></li>
+          <li class="active"><a href="index.html#portfolio">Projets</a></li>
+          <li><a href="index.html#contact">Contacter</a></li>
+          <li class="get-started"><a href="assets/CV_DEONNA.pdf">Mon CV</a></li>
+        </ul>
+      </nav>
     </div>
-        
-  </header><!-- End Header -->
-  <main>
-    <div class="container">
-      <div class="project">
-        <div class="project-header">
-          <h1 class="project-title">SAE 301\</h1>
-          <h1 class="project-title2"><!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projet 2 Details</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/css/projet.css" rel="stylesheet">
-   <!-- Google Fonts -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
-   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container-fluid d-flex">
-
-      <div class="logo mr-auto">
-        <!--<h1 class="text-light"><a href="index.html"><span>Ninestars</span></a></h1>-->
-       
-        <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
-        </div>
-
-          <nav class="nav-menu d-none d-lg-block">
-            <ul>
-              <li class="active"><a href="index.html#header">Home</a></li>
-              <li><a href="index.html#about">À Propos</a></li>
-              <li><a href="index.html#services">Intérêts</a></li>
-              <li><a href="index.html#portfolio">Projets</a></li>
-              
-              <li><a href="index.html#contact">Contacter</a></li>
-
-              <li class="get-started"><a href="assets/CV_DEONNA.pdf">Mon CV</a></li>
-            </ul>
-          </nav><!-- .nav-menu -->
-        </div>
-    </div>
-        
-  </header><!-- End Header -->
-  <main>
+  </header><main>
     <div class="container">
       <div class="project">
         <div class="project-header">
           <h1 class="project-title">SAE 301 \</h1>
           <h1 class="project-title2">Collecte de données Web</h1>
           <p class="project-skill">Développer un outil décisionnel - Compétence 4</p>
-          <p class="project-description">Web Scraping Python : Extraction automatisée de données géographiques ciblées.
-
-API : Requêtage et filtrage de données météorologiques historiques.
-
-Traitement de données : Structuration et manipulation via DataFrames (Pandas).
-
-Dashboard Interactif : Dataviz analytique combinant cartographie (Folium) et graphiques (Matplotlib/Seaborn).</p>
+          <p class="project-description">
+            Web Scraping Python : Extraction automatisée de données géographiques ciblées.<br><br>
+            API : Requêtage et filtrage de données météorologiques historiques.<br><br>
+            Traitement de données : Structuration et manipulation via DataFrames (Pandas).<br><br>
+            Dashboard Interactif : Dataviz analytique combinant cartographie (Folium) et graphiques (Matplotlib/Seaborn).
+          </p>
         </div>
     
         <div class="project-steps">
           <h2>Étapes \ </h2>
-            <ul>
-              <li>Recherche, analyse et sélection des sources de données (Site web à scraper et API météorologique SYNOP)</li>
-              <li>Extraction et structuration des données via Web Scraping et requêtage API filtré</li>
-              <li>Traitement et manipulation des données géographiques et climatiques sous forme de DataFrames</li>
-              <li>Conception d'un tableau de bord interactif avec indicateurs visuels (Cartes Folium et graphiques comparatifs)</li>
-              <li>Optimisation du code, gestion des erreurs et automatisation de l'outil décisionnel</li>
-            </ul>
+          <ul>
+            <li>Recherche, analyse et sélection des sources de données (Site web à scraper et API météorologique SYNOP)</li>
+            <li>Extraction et structuration des données via Web Scraping et requêtage API filtré</li>
+            <li>Traitement et manipulation des données géographiques et climatiques sous forme de DataFrames</li>
+            <li>Conception d'un tableau de bord interactif avec indicateurs visuels (Cartes Folium et graphiques comparatifs)</li>
+            <li>Optimisation du code, gestion des erreurs et automatisation de l'outil décisionnel</li>
+          </ul>
         </div>
     
         <div class="project-images">
           <h2 data-aos="fade-up">Traces du Projet \</h2>
-              <p class="project-skill">.c .png</p>
-                <img src="assets/img/SAE102_CODE.png" alt="">
-                <img src="assets/img/SAE102_pseudo.png" alt="">
-                
+          <img src="assets/img/SAE102_CODE.png" alt="Code SAE">
+          <img src="assets/img/SAE102_pseudo.png" alt="Pseudo Code SAE">
         </div>
+
         <div class="project-steps">
           <h2>Outils \ </h2>
           <ul>
@@ -128,13 +66,12 @@ Dashboard Interactif : Dataviz analytique combinant cartographie (Folium) et gra
             <li>Python</li>
           </ul>
         </div>
+
         <div class="project-button">
           <a href="https://github.com/deydey35/deydey35.github.io/tree/main/comp2-SAE102" class="btn">Code Source</a>
         </div>
       </div>
     </div>
   </main>
-
-  
 </body>
 </html>
